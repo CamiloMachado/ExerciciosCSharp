@@ -16,16 +16,19 @@ namespace ExerciciosCSharp.Exercicios {
     internal class Exercicio2 {
 
         public static void Executar() {
-            
-            double cotacaoDolar = 0;
-            double valorDolar = 0;
+
+            // Criação das variáveis
+            double cotacaoDolar = 4.92;
+            double valorDolar = 300;
             double valorEmReal = 0;
 
-            valorEmReal = cotacaoDolar + valorEmReal;
+            // Calculo da valor em real
+            valorEmReal = cotacaoDolar * valorDolar;
 
+            // Mostrar os valores
             Console.WriteLine($"Cotação do dólar: {cotacaoDolar}");
             Console.WriteLine($"Valor em dólares: {valorDolar}");
-            Console.WriteLine($"Valor em reais {valorEmReal}");
+            Console.WriteLine($"Valor em reais: {valorEmReal}");
         }
     }
 }
