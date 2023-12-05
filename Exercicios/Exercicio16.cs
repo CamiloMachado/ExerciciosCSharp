@@ -13,7 +13,9 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("\nDigite outro número:");
             int.TryParse(Console.ReadLine(), out int num2);
 
+            // validando os números
             if (num1 == num2) {
+                // Iguais
                 Console.WriteLine("\nOs número são iguais.");
             } else if (num1 > num2) {
                 int maior = num1;
