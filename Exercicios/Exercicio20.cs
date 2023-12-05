@@ -11,25 +11,25 @@
             int maior;
 
             // Recebendo os valores
-            Console.WriteLine("Digite o primeiro valor: ");
+            Console.Write("Digite o primeiro valor: ");
             _ = int.TryParse(Console.ReadLine(), out int a);
-            Console.WriteLine("Digite o segundo valor: ");
+            Console.Write("\nDigite o segundo valor: ");
             _ = int.TryParse(Console.ReadLine(), out int b);
-            Console.WriteLine("Digite o terceiro valor: ");
+            Console.Write("\nDigite o terceiro valor: ");
             _ = int.TryParse(Console.ReadLine(), out int c);
 
             // Valindo se os valores recebidos são válido
             if (a < 0) {
-                Console.WriteLine("Valor inválido!");
-                Console.WriteLine("Digite o valor novamente: ");
+                Console.WriteLine("\nValor inválido!");
+                Console.Write("Digite o valor novamente: ");
                 _ = int.TryParse(Console.ReadLine(), out a);
             } else if (b < 0) {
-                Console.WriteLine("Valor inválido!");
-                Console.WriteLine("Digite o valor novamente: ");
+                Console.WriteLine("\nValor inválido!");
+                Console.Write("Digite o valor novamente: ");
                 _ = int.TryParse(Console.ReadLine(), out b);
             } else if (c < 0) {
-                Console.WriteLine("Valor inválido!");
-                Console.WriteLine("Digite o valor novamente: ");
+                Console.WriteLine("\nValor inválido!");
+                Console.Write("Digite o valor novamente: ");
                 _ = int.TryParse(Console.ReadLine(), out c);
             }
 
@@ -52,8 +52,8 @@
             }
 
             // Exibindo o reultado.
-            Console.WriteLine("O resultado do menor valor multiplicado pelo maior valor é: {0}", (menor * maior));
-            Console.WriteLine($"O resultado do maior valor dividido pelo menor valor é: {maior / menor}");
+            Console.WriteLine("\nO resultado do menor valor multiplicado pelo maior valor é: {0}", (menor * maior));
+            Console.WriteLine($"\nO resultado do maior valor dividido pelo menor valor é: {maior / menor}");
         }
     }
 }
