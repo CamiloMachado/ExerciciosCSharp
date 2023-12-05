@@ -1,2 +1,2 @@
 # ExerciciosCSharp
-Exercícios para a consolidar os conhecimentos de C#.
+Exercícios para consolidar os conhecimentos de C#.
