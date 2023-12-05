@@ -13,7 +13,9 @@
             int B = 2;
             int C = 4;
 
+            // validando os lados e se é um triângulo válido ou não, não sendo informa.
             if (A < B + C && B < A + C && C < A + B) {
+                // validando o tipo de triângulo e informando
                 if (A == B && B == C) {
                     Console.WriteLine("Triângulo é equilátero!");
                 } else if (A == B || A == C || B == C) {
