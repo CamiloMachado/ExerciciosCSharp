@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using ExerciciosCSharp;
-using ExerciciosCSharp.Exercicios;
+﻿using ExerciciosCSharp.Exercicios;
 
 namespace ExerciciosCSharp {
 
@@ -28,6 +25,7 @@ namespace ExerciciosCSharp {
                 {"Exercicio #16", Exercicio16.Executar},
                 {"Exercicio #17", Exercicio17.Executar},
                 {"Exercicio #18", Exercicio18.Executar},
+                {"Exercicio #19", Exercicio19.Executar},
             });
 
             central.SelecionarEExecutar();
