@@ -70,15 +70,15 @@
             // Efetuando a opção desejada
             switch (opcao) {
                 case 1:
-                    Opcao1(num1, num2);
+                    Opcao1(num1, num2);// Passa os parâmetros para o método
                     break;
 
                 case 2:
-                    Opcao2(num1, num2);
+                    Opcao2(num1, num2); // Passa os parâmetros para o método
                     break;
 
                 case 3:
-                    Opcao3(num1, num2);
+                    Opcao3(num1, num2); // Passa os parâmetros para o método
                     break;
 
                 case 4:

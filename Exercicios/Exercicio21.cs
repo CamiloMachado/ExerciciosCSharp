@@ -22,7 +22,7 @@ namespace ExerciciosCSharp.Exercicios {
                 }
 
                 // verificando se o usuário deseja continuar
-                Console.WriteLine("Deseja continuar(s/n): ");
+                Console.WriteLine("Deseja continuar(S/N): ");
                 var opcao = Console.ReadLine();
 
                 if (opcao == "n" || opcao == "N") {
