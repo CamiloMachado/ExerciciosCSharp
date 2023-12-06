@@ -35,6 +35,7 @@ namespace ExerciciosCSharp {
 
                 // Nível 3: Estrutura de Seleção
                 {"Exercicio #23", Exercicio23.Executar},
+                {"Exercicio #24", Exercicio24.Executar},
             });
 
             central.SelecionarEExecutar();
