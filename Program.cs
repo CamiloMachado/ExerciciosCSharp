@@ -41,6 +41,7 @@ namespace ExerciciosCSharp {
                 // Nível 4: Estruturas de Repetição
                 {"Exercicio #26", Exercicio26.Executar},
                 {"Exercicio #27", Exercicio27.Executar},
+                {"Exercicio #28", Exercicio28.Executar},
             });
 
             central.SelecionarEExecutar();

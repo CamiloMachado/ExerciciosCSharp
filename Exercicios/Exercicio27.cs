@@ -43,7 +43,7 @@
         }
 
         public static void Executar() {
-            // Solicitando o valor de N!
+            // Solicitando o valor de quantas números serão processados
             Console.Write("Digite quantos números deseja fazer a operação: ");
             _ = int.TryParse(Console.ReadLine(), out int numDeProcessamentos);
 
