@@ -12,7 +12,7 @@ namespace ExerciciosCSharp.Exercicios {
 
         public static void Executar() {
             //  variáveis
-            double C, N, E, salarioTotal, salarioExcedente;
+            double E, salarioTotal, salarioExcedente;
 
             // Variável terminar o programa
             char parar = 'n';
@@ -21,9 +21,9 @@ namespace ExerciciosCSharp.Exercicios {
             while (parar == 'n' || parar == 'N') {
                 // Solicitando ao usuário o Código do operário e as horas trabalhadas.
                 Console.Write("Informe o código do operário: ");
-                _ = double.TryParse(Console.ReadLine(), out C);
+                _ = double.TryParse(Console.ReadLine(), out double C);
                 Console.Write("Informe as horas trabalhadas: ");
-                _ = double.TryParse(Console.ReadLine(), out N);
+                _ = double.TryParse(Console.ReadLine(), out double N);
 
                 // Teste para verificar se foram trabalhado horas acima de 50 e faz os calculos necessários.
                 if (N > 50) {
