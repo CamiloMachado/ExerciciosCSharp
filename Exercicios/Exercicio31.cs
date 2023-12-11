@@ -33,10 +33,10 @@ namespace ExerciciosCSharp.Exercicios {
                     // Se o número for positivo, fara o teste para saber se é par ou ímpar
                     if (num % 2 == 0) {
                         Console.WriteLine($"{num} é par!");
-                        totalPar = totalPar + num;
+                        totalPar += num;
                     } else {
                         Console.WriteLine($"{num} é ímpar!");
-                        totalImpar = totalImpar + num;
+                        totalImpar += num;
                     }
                 }
             }

@@ -1,16 +1,15 @@
-﻿// Faça um programa que leia 10 valores inteiros e positivos e:
-// - Encontre o maior valor
-// - Encontre o menor valor
-// - Calcule a média dos números lidos
+﻿// Faça um programa que determine o maior e o menor entre N números lidos.
+// A condição de parada é a entrada de um valor 0, ou seja, o programa deve ficar executando
+// até que a entrada seja igual a 0 (ZERO).
 
 namespace ExerciciosCSharp.Exercicios {
 
-    internal class Exercicio36 {
+    internal class Exercicio42 {
 
         public static void Executar() {
             // Criação do array conjunto e das variáveis para o menor valor, maior valor e a média.
             uint[] conjunto = new uint[10];
-            uint menor, maior, total = 0, media;
+            uint menor, maior;
 
             conjunto[0] = 10;
             conjunto[1] = 5;
@@ -28,11 +27,8 @@ namespace ExerciciosCSharp.Exercicios {
 
             // Aqui vai percorrer o conjunto
             foreach (var num in conjunto) {
-                // Somar os valores para fazer a média
-                total += num;
-
-                // Teste para verificar se o número é negativo e saí do laco foreach
-                if (num < 0) {
+                // Teste para verificar se o número é Zero e saí do laco foreach
+                if (num == 0) {
                     break;
                 } else {
                     // Se o número for positivo, fará o teste para ver se é maior ou menor
@@ -44,12 +40,9 @@ namespace ExerciciosCSharp.Exercicios {
                 }
             }
 
-            media = total / 10;
-
-            // Mostra o menor, o maior e a média
+            // Mostra o menor e o maior
             Console.WriteLine("\nO menor número é: {0}", menor);
             Console.WriteLine("O maior número é: {0}", maior);
-            Console.WriteLine("O média é: {0}", media);
         }
     }
 }
