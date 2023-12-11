@@ -38,7 +38,7 @@
                     break;
 
                 default:
-                    Console.WriteLine("Opção inváilda!");
+                    Console.WriteLine("Opção inválida!");
                     break;
             }
             Console.WriteLine("\nFim!");

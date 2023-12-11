@@ -18,9 +18,9 @@ namespace ExerciciosCSharp.Exercicios {
             double graos = 0;
 
             // laço para calcular o tanto de grãos
-            for (int i = 0; i <= 63; i++) {
-                graos += Math.Pow(2, i);
-                Console.WriteLine(graos);
+            for (int i = 1; i <= 64; i++) {
+                graos += Math.Pow(2, i - 1);
+                Console.WriteLine($"O valor de graos no quadrado {i:D2} é de: {graos}");
             }
 
             //Informando o tanto de grãos
