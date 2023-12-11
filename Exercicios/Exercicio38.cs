@@ -14,11 +14,11 @@ namespace ExerciciosCSharp.Exercicios {
             //  variáveis
             double C, N, E, salarioTotal, salarioExcedente;
 
-            // Variável para voltar ao menu ou terminar o programa
-            char menuPrincipal = 'n';
+            // Variável terminar o programa
+            char parar = 'n';
 
             // Laço para executar o programa enquanto o usuário desejar
-            while (menuPrincipal == 'n' || menuPrincipal == 'N') {
+            while (parar == 'n' || parar == 'N') {
                 // Solicitando ao usuário o Código do operário e as horas trabalhadas.
                 Console.Write("Informe o código do operário: ");
                 _ = double.TryParse(Console.ReadLine(), out C);
@@ -44,9 +44,9 @@ namespace ExerciciosCSharp.Exercicios {
                 Console.WriteLine($"\nO sálario total do operário {C} é: {salarioTotal:F2}");
                 Console.WriteLine($"O salário excedente do operário {C} é: {salarioExcedente:F2}");
 
-                // Pergunta se o usuário deseja voltar ao menu principal
+                // Pergunta se o usuário deseja encerrar o programa
                 Console.Write("\nDeseja encerrar o programa?(S/N): ");
-                _ = char.TryParse(Console.ReadLine(), out menuPrincipal);
+                _ = char.TryParse(Console.ReadLine(), out parar);
                 Console.WriteLine("");
             }
         }
