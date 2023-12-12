@@ -7,9 +7,9 @@ namespace ExerciciosCSharp.Exercicios {
 
         public static void Executar() {
             // Declaração dos vetores
-            int[] vetorX = { 1, 2, 3 };
+            int[] vetorX = [1, 2, 3];
 
-            int[] vetorY = { 1, 2, 3 };
+            int[] vetorY = [1, 2, 3];
 
             // Variáveis onde vão ser guardado os valores.
             int soma;
