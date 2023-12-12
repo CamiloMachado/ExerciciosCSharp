@@ -61,6 +61,7 @@ namespace ExerciciosCSharp {
 
                 //Nível 5: Vetores e Matrizes
                 {"Exercicio #45", Exercicio45.Executar},
+                {"Exercicio #46", Exercicio46.Executar},
 
                 // Nível 6: Métodos
             });
