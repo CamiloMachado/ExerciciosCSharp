@@ -12,6 +12,7 @@ namespace ExerciciosCSharp.Exercicios {
     internal class Exercicio48 {
 
         public static void Executar() {
+            // Criação dos vetores
             string[] nomeCandidata = new string[20];
             uint[] idadeCandidata = new uint[20];
 
