@@ -58,6 +58,11 @@ namespace ExerciciosCSharp {
                 {"Exercicio #42", Exercicio42.Executar},
                 {"Exercicio #43", Exercicio43.Executar},
                 {"Exercicio #44", Exercicio44.Executar},
+
+                //Nível 5: Vetores e Matrizes
+                {"Exercicio #45", Exercicio45.Executar},
+
+                // Nível 6: Métodos
             });
 
             central.SelecionarEExecutar();
