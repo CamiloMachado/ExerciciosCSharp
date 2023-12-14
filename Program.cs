@@ -70,6 +70,7 @@ namespace ExerciciosCSharp {
                 {"Exercicio #52", Exercicio52.Executar},
                 {"Exercicio #53", Exercicio53.Executar},
                 {"Exercicio #54", Exercicio54.Executar},
+                {"Exercicio #55", Exercicio55.Executar},
 
                 // Nível 6: Métodos
             });
