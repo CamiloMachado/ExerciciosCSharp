@@ -80,6 +80,7 @@ namespace ExerciciosCSharp {
                 {"Exercicio #60", Exercicio60.Executar},
                 {"Exercicio #61", Exercicio61.Executar},
                 {"Exercicio #62", Exercicio62.Executar},
+                {"Exercicio #63", Exercicio63.Executar},
             });
 
             central.SelecionarEExecutar();
