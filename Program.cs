@@ -78,6 +78,7 @@ namespace ExerciciosCSharp {
 
                 // Nível 6: Métodos
                 {"Exercicio #60", Exercicio60.Executar},
+                {"Exercicio #61", Exercicio61.Executar},
             });
 
             central.SelecionarEExecutar();
