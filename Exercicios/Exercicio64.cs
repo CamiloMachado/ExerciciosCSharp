@@ -14,7 +14,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio64 {
 
-        private static void CarregarVetor(double[] vetor) {
+        private void CarregarVetor(double[] vetor) {
             // Laço para o usuário fazer a carga dos dados no vetor.
             for (int i = 0; i < vetor.Length; i++) {
                 Console.Write("Informe o valor que será guardado na {0}º do vetor: ", i + 1);
@@ -22,7 +22,7 @@ namespace ExerciciosCSharp.Exercicios {
             }
         }
 
-        private static void ListarVetor(double[] vetor) {
+        private void ListarVetor(double[] vetor) {
             Console.WriteLine("Listando os valores guardado no vetor!");
 
             // laço para listar o vetor.
@@ -31,7 +31,7 @@ namespace ExerciciosCSharp.Exercicios {
             }
         }
 
-        private static void ExibirPares(double[] vetor) {
+        private void ExibirPares(double[] vetor) {
             Console.Write("Exibindo os Valores pares: ");
 
             // Laço com uma validação, antes de exibir os números pares.
@@ -43,7 +43,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        private static void ExibirImpares(double[] vetor) {
+        private void ExibirImpares(double[] vetor) {
             Console.Write("Exibindo os Valores ímpares: ");
 
             // Laço com uma validação, antes de exibir os números ímpares.
@@ -55,7 +55,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        private static void QuantidadeParesPosicoesImpares(double[] vetor) {
+        private void QuantidadeParesPosicoesImpares(double[] vetor) {
             // Variável que vai guardar o valor total de número pares em posições ímpares.
             uint paresPosicoesImpares = 0;
 
@@ -68,7 +68,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("O total de números pares em posições ímpares é: {0}", paresPosicoesImpares);
         }
 
-        private static void QuantidadeImparesPosicoesPares(double[] vetor) {
+        private void QuantidadeImparesPosicoesPares(double[] vetor) {
             // Variável que vai guardar o valor total de número ímpares em posições pares.
             uint imparesPosicoesPares = 0;
 
@@ -83,7 +83,7 @@ namespace ExerciciosCSharp.Exercicios {
 
         public static void Executar() {
             // Efetuado a instância da classe para que os métodos não estáticos sejam acessado pelo método estático.
-            // Exercicio64 programa = new();
+            Exercicio64 programa = new();
 
             // Variável onde guarda a opção escolhida pelo usuário.
             uint opcao = 0;
@@ -123,16 +123,14 @@ namespace ExerciciosCSharp.Exercicios {
                 try {
                     switch (opcao) {
                         case 1:
-                            // programa.CarregarVetor(vetor);
-                            CarregarVetor(vetor);
+                            programa.CarregarVetor(vetor);
                             break;
 
                         case 2:
                             // Faz uma validação se foi carregado o vetor.
                             // Feito uma tratativa de erro caso o vetor não estaja carregado.
                             if (vetor[0] != 0000) {
-                                // programa.ListarVetor(vetor);
-                                ListarVetor(vetor);
+                                programa.ListarVetor(vetor);
                             } else {
                                 throw new ArgumentException("O vetor ainda não foi carregado!" +
                                     "\nFavor carregar o vetor!");
@@ -143,8 +141,7 @@ namespace ExerciciosCSharp.Exercicios {
                             // Faz uma validação se foi carregado o vetor antes de exibir os números pares.
                             // Feito uma tratativa de erro caso o vetor não estaja carregado.
                             if (vetor[0] != 0000) {
-                                // programa.ExibirPares(vetor);
-                                ExibirPares(vetor);
+                                programa.ExibirPares(vetor);
                             } else {
                                 throw new ArgumentException("O vetor ainda não foi carregado!" +
                                     "\nFavor carregar o vetor!");
@@ -155,8 +152,7 @@ namespace ExerciciosCSharp.Exercicios {
                             // Faz uma validação se foi carregado o vetor.
                             // Feito uma tratativa de erro caso o vetor não estaja carregado.
                             if (vetor[0] != 0000) {
-                                // programa.ExibirImpares(vetor);
-                                ExibirImpares(vetor);
+                                programa.ExibirImpares(vetor);
                             } else {
                                 throw new ArgumentException("O vetor ainda não foi carregado!" +
                                     "\nFavor carregar o vetor!");
@@ -167,8 +163,7 @@ namespace ExerciciosCSharp.Exercicios {
                             // Faz uma validação se foi carregado o vetor.
                             // Feito uma tratativa de erro caso o vetor não estaja carregado.
                             if (vetor[0] != 0000) {
-                                // programa.QuantidadeParesPosicoesImpares(vetor);
-                                QuantidadeParesPosicoesImpares(vetor);
+                                programa.QuantidadeParesPosicoesImpares(vetor);
                             } else {
                                 throw new ArgumentException("O vetor ainda não foi carregado!" +
                                     "\nFavor carregar o vetor!");
@@ -179,8 +174,7 @@ namespace ExerciciosCSharp.Exercicios {
                             // Faz uma validação se foi carregado o vetor.
                             // Feito uma tratativa de erro caso o vetor não estaja carregado.
                             if (vetor[0] != 0000) {
-                                // programa.QuantidadeImparesPosicoesPares(vetor);
-                                QuantidadeImparesPosicoesPares(vetor);
+                                programa.QuantidadeImparesPosicoesPares(vetor);
                             } else {
                                 throw new ArgumentException("O vetor ainda não foi carregado!" +
                                     "\nFavor carregar o vetor!");

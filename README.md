@@ -1,19 +1,19 @@
-# 64 Exercícios de C#
+# Lista de 64 Exercícios de C#
 
-Foram efetuados 64 exercícios, para consolidação do conhecimento.
+Foram efetuados 64 exercícios de C#, para consolidação do conhecimento. -> [lista](https://drive.google.com/file/d/1wdVeud_MF3TmATpzX5wh0uVGy1h4tFpb/view?usp=drive_link)
 
 Curso efetuado na Udemy, instrutor Leonardo Moura Leitao da Cod3r. -> [certificado](https://drive.google.com/file/d/1HldLXRN2kttmVWn43qVa-8nG8tvvs_vv/view?usp=drive_link)
 
-Foram efetuado os exercícios da [lista](https://drive.google.com/file/d/1wdVeud_MF3TmATpzX5wh0uVGy1h4tFpb/view?usp=drive_link)
+Os exercícios ajudaram no entendimento da lógica, a criação dos membros e métodos de uma classe.
 
-Os exercícios ajudaram no entendimento da lógica e estruturas da Classe.
+O exercício 64 foi onde utilizei mais complexidade, para me desafiar e consolidar melhor o conhecimento.
 
-A criação dos membros e métodos de uma classe, métodos com retorno.
+Difentes tipos de variáveis e array.
 
-O exercício final foi onde, foram utilizados mais estruturas.
+Utilizado estruturas de controle, como: if/else, switch, for e foreach.
 
-difentes tipos de variáveis e um array.
+Utilizado exception para tratativa de possíveis erros, junto do try/catch.
 
-utilizado das estruturas de controle, como: if/else, switch, for e foreach.
+Com atuação do usuário, digitando e guardando em variável.
 
-Utilizando de exception para tratativa de possíveis erros, junto do try/catch.
+Usado métodos estático e não estático.
