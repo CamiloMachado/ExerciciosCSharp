@@ -6,7 +6,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio16 {
 
-        public static void Executar() {
+        public void Executar() {
             // Solicitando os valores
             Console.WriteLine("Digite um número:");
             int.TryParse(Console.ReadLine(), out int num1);

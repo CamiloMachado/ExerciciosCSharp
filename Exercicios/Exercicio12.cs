@@ -1,7 +1,4 @@
-﻿using System;
-using System.Numerics;
-
-namespace ExerciciosCSharp.Exercicios {
+﻿namespace ExerciciosCSharp.Exercicios {
     // Escreva um programa que leia um número inteiro e exiba o seu módulo.
     // O módulo de um número x é:
     // x se x é maior ou igual a zero
@@ -9,7 +6,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio12 {
 
-        public static void Executar() {
+        public void Executar() {
             // Variável
             int x;
             int modulo;

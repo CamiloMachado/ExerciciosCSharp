@@ -14,7 +14,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio64 {
 
-        private static void CarregarVetor(double[] vetor) {
+        private void CarregarVetor(double[] vetor) {
             // Laço para o usuário fazer a carga dos dados no vetor.
             for (int i = 0; i < vetor.Length; i++) {
                 Console.Write("Informe o valor que será guardado na {0}º do vetor: ", i + 1);
@@ -23,7 +23,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        private static void ListarVetor(double[] vetor) {
+        private void ListarVetor(double[] vetor) {
             Console.WriteLine("Listando os valores guardado no vetor!");
             // Faz uma validação se foi carregado o vetor antes de listar ele.
             // Feito uma tratativa de erro caso o vetor não estaja carregado.
@@ -38,7 +38,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        private static void ExibirPares(double[] vetor) {
+        private void ExibirPares(double[] vetor) {
             Console.Write("Exibindo os Valores pares: ");
             // Faz uma validação se foi carregado o vetor antes de exibir os números pares.
             // Feito uma tratativa de erro caso o vetor não estaja carregado.
@@ -56,7 +56,7 @@ namespace ExerciciosCSharp.Exercicios {
             }
         }
 
-        private static void ExibirImpares(double[] vetor) {
+        private void ExibirImpares(double[] vetor) {
             Console.Write("Exibindo os Valores ímpares: ");
             // Faz uma validação se foi carregado o vetor antes de exibir os números ímpares.
             // Feito uma tratativa de erro caso o vetor não estaja carregado.
@@ -74,7 +74,7 @@ namespace ExerciciosCSharp.Exercicios {
             }
         }
 
-        private static void QuantidadeParesPosicoesImpares(double[] vetor) {
+        private void QuantidadeParesPosicoesImpares(double[] vetor) {
             // Variável que vai guardar o valor total de número pares em posições ímpares.
             uint paresPosicoesImpares = 0;
             // Faz uma validação se foi carregado o vetor antes de exibir a quantidade de números pares em posições ímpares.
@@ -93,7 +93,7 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        private static void QuantidadeImparesPosicoesPares(double[] vetor) {
+        private void QuantidadeImparesPosicoesPares(double[] vetor) {
             // Variável que vai guardar o valor total de número ímpares em posições pares.
             uint imparesPosicoesPares = 0;
             // Faz uma validação se foi carregado o vetor antes de exibir a quantidade de números ímpares em posições pares.
@@ -112,7 +112,10 @@ namespace ExerciciosCSharp.Exercicios {
             Console.WriteLine("");
         }
 
-        public static void Executar() {
+        public void Executar() {
+            // Efetuado a instância da classe para que os métodos não estáticos sejam acessado pelo método estático.
+            // Exercicio64 programa = new();
+
             // Variável onde guarda a opção escolhida pelo usuário.
             uint opcao = 0;
             Console.WriteLine("Bem vindo!");

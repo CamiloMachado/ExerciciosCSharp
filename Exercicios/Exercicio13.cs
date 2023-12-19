@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExerciciosCSharp.Exercicios {
+﻿namespace ExerciciosCSharp.Exercicios {
     // Escreva um programa que leia 3 números inteiros e imprima na tela os valores em ordem decrescente.
 
     internal class Exercicio13 {

@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace ExerciciosCSharp.Exercicios {
+﻿namespace ExerciciosCSharp.Exercicios {
     // Escreva um programa que leia dois números e apresente a diferença do maior para o menor.
 
     internal class Exercicio14 {
 
-        public static void Executar() {
+        public void Executar() {
             // variáveis
             int maior;
             int menor;

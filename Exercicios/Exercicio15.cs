@@ -10,7 +10,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio15 {
 
-        public static void Executar() {
+        public void Executar() {
             //Solicitando as notas do aluno
             Console.Write("Digite as quatro notas do aluno.");
             Console.Write("\nNota 1: ");

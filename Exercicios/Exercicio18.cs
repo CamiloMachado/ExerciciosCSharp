@@ -10,7 +10,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio18 {
 
-        public static void Executar() {
+        public void Executar() {
             // Variável
             int codigo = 3;
 
