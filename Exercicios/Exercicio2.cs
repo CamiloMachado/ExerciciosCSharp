@@ -7,14 +7,13 @@
 
     internal class Exercicio2 {
 
-        public void Executar() {
+        public static void Executar() {
             // Criação das variáveis
             double cotacaoDolar = 4.92;
             double valorDolar = 300;
-            double valorEmReal = 0;
 
             // Calculo da valor em real
-            valorEmReal = cotacaoDolar * valorDolar;
+            double valorEmReal = cotacaoDolar * valorDolar;
 
             // Mostrar os valores
             Console.WriteLine($"Cotação do dólar: {cotacaoDolar}");

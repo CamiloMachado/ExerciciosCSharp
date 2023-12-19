@@ -7,7 +7,7 @@
 
         public static void Executar() {
             // Variáveis
-            double A = 0, B = 0;
+            double A, B;
 
             // Solicitando um valor ao usuário
             Console.WriteLine("Digite um número: ");

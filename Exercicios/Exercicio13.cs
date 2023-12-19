@@ -10,13 +10,13 @@
 
             // Solicitando os números.
             Console.Write("Digite o primeiro número: ");
-            int.TryParse(Console.ReadLine(), out int num1);
+            _ = int.TryParse(Console.ReadLine(), out int num1);
 
             Console.Write("\nDigite o sgundo número: ");
-            int.TryParse(Console.ReadLine(), out int num2);
+            _ = int.TryParse(Console.ReadLine(), out int num2);
 
             Console.Write("\nDigite o terceiro número: ");
-            int.TryParse(Console.ReadLine(), out int num3);
+            _ = int.TryParse(Console.ReadLine(), out int num3);
 
             // Ordenando os números
 

@@ -4,7 +4,7 @@ namespace ExerciciosCSharp {
 
     internal class Program {
 
-        private static void Main(string[] args) {
+        private static void Main() {
             var central = new CentralDeExercicios(new Dictionary<string, Action>() {
                 // Exercícios
                 // Nível 1: Entrada, Processamento e Saída

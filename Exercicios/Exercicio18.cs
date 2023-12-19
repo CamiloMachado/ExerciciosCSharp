@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExerciciosCSharp.Exercicios {
+﻿namespace ExerciciosCSharp.Exercicios {
     // Escreva um programa que leia um número inteiro (variável CODIGO).
     // Verificar se o código é igual a 1, igual a 2 ou igual a 3.
     // Caso não seja, apresentar a mensagem “Código inválido”.
@@ -10,7 +8,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio18 {
 
-        public void Executar() {
+        public static void Executar() {
             // Variável
             int codigo = 3;
 

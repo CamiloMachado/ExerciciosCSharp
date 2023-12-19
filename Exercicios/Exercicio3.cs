@@ -1,18 +1,16 @@
 ﻿using System;
 
 namespace ExerciciosCSharp.Exercicios {
-
-    // Faça um programa para pagamento de comissão de vendedores de peças, levando-se em consideração que sua 
-    // comissão será de 5% do total da venda e que você tem os seguintes dados: 
-    // - Identificação do vendedor 
-    // - Código da peça 
+    // Faça um programa para pagamento de comissão de vendedores de peças, levando-se em consideração que sua
+    // comissão será de 5% do total da venda e que você tem os seguintes dados:
+    // - Identificação do vendedor
+    // - Código da peça
     // - Preço unitário da peça
     // - Quantidade vendida
 
     internal class Exercicio3 {
 
         public static void Executar() {
-
             // Criação das variáveis
             string nomeDoVendendor = "Camilo";
             int codigoDaPeca = 7;
@@ -28,8 +26,7 @@ namespace ExerciciosCSharp.Exercicios {
             // Mostrando os resultados
             Console.WriteLine("O vendedor {0}, efetuou a venda de {1} peças do código {2}.", nomeDoVendendor, quantidaVendida, codigoDaPeca);
             Console.WriteLine($"O valor total da venda: {totalVenda}");
-            Console.WriteLine($"O valor da comissão pela venda é de: {comissao.ToString("F")}");
-
+            Console.WriteLine($"O valor da comissão pela venda é de: {comissao:F}");
         }
     }
 }

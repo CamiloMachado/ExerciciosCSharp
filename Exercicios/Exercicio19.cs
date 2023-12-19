@@ -7,7 +7,7 @@
 
     internal class Exercicio19 {
 
-        public void Executar() {
+        public static void Executar() {
             //Variáveis
             int A = 3;
             int B = 2;

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.Serialization;
-using System.Text;
-
-namespace ExerciciosCSharp.Exercicios {
+﻿namespace ExerciciosCSharp.Exercicios {
     //  Ler quatro valores numéricos inteiros e apresentar o resultado dois a dois da adição e multiplicação entre os
     //  valores lidos, baseando-se na utilização do conceito de propriedade distributiva.Dica: se forem lidas as variáveis
     //  A, B, C e D, devem ser somados e multiplicados os valores de A com B, A com C e A com D; depois B com C, B
@@ -27,6 +22,13 @@ namespace ExerciciosCSharp.Exercicios {
             int adicao5 = B + D;
             int adicao6 = C + D;
 
+            Console.WriteLine(adicao1);
+            Console.WriteLine(adicao2);
+            Console.WriteLine(adicao3);
+            Console.WriteLine(adicao4);
+            Console.WriteLine(adicao5);
+            Console.WriteLine(adicao6);
+
             // Multiplicação
             int multiplicacao1 = A * B;
             int multiplicacao2 = A * C;
@@ -34,6 +36,13 @@ namespace ExerciciosCSharp.Exercicios {
             int multiplicacao4 = B * C;
             int multiplicacao5 = B * D;
             int multiplicacao6 = C * D;
+
+            Console.WriteLine(multiplicacao1);
+            Console.WriteLine(multiplicacao2);
+            Console.WriteLine(multiplicacao3);
+            Console.WriteLine(multiplicacao4);
+            Console.WriteLine(multiplicacao5);
+            Console.WriteLine(multiplicacao6);
 
             //int distributiva = A * B + A * C + A * D + B * C + B * D + C * D;
         }

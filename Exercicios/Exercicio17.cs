@@ -8,7 +8,7 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio17 {
 
-        public void Executar() {
+        public static void Executar() {
             //Solicitando um número
             Console.WriteLine("Digite um número: ");
             int.TryParse(Console.ReadLine(), out int num);

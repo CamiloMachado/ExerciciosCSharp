@@ -3,7 +3,7 @@
 
     internal class Exercicio14 {
 
-        public void Executar() {
+        public static void Executar() {
             // variáveis
             int maior;
             int menor;
@@ -11,10 +11,10 @@
 
             // Solicitado os números
             Console.Write("Digite um número: ");
-            int.TryParse(Console.ReadLine(), out int num1);
+            _ = int.TryParse(Console.ReadLine(), out int num1);
 
             Console.Write("\nDigite outro número: ");
-            int.TryParse(Console.ReadLine(), out int num2);
+            _ = int.TryParse(Console.ReadLine(), out int num2);
 
             //Validando e ordenando os números e calculando a diferença
             if (num1 > num2) {

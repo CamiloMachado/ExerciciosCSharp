@@ -10,17 +10,17 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio15 {
 
-        public void Executar() {
+        public static void Executar() {
             //Solicitando as notas do aluno
             Console.Write("Digite as quatro notas do aluno.");
             Console.Write("\nNota 1: ");
-            double.TryParse(Console.ReadLine(), out double nota1);
+            _ = double.TryParse(Console.ReadLine(), out double nota1);
             Console.Write("\nNota 2: ");
-            double.TryParse(Console.ReadLine(), out double nota2);
+            _ = double.TryParse(Console.ReadLine(), out double nota2);
             Console.Write("\nNota 3: ");
-            double.TryParse(Console.ReadLine(), out double nota3);
+            _ = double.TryParse(Console.ReadLine(), out double nota3);
             Console.Write("\nNota 4: ");
-            double.TryParse(Console.ReadLine(), out double nota4);
+            _ = double.TryParse(Console.ReadLine(), out double nota4);
 
             //Calculando a média
             double media = (nota1 + nota2 + nota3 + nota4) / 4;
@@ -33,7 +33,7 @@ namespace ExerciciosCSharp.Exercicios {
                 //Recuperação
                 Console.WriteLine("\nAluno de recuperação, nota: {0}", media.ToString("F1"));
                 Console.WriteLine("\ndigite a nota da recuperação: ");
-                double.TryParse(Console.ReadLine(), out double notaRecuperacao);
+                _ = double.TryParse(Console.ReadLine(), out double notaRecuperacao);
                 media = (notaRecuperacao + media) / 2;
                 if (media >= 7) {
                     // Aprovado na recuperação

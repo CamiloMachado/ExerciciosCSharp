@@ -6,14 +6,13 @@
 
     internal class Exercicio12 {
 
-        public void Executar() {
+        public static void Executar() {
             // Variável
-            int x;
             int modulo;
 
             // Solicitado o número ao usuário e converte para inteiro
             Console.Write("Digite um número: ");
-            int.TryParse(Console.ReadLine(), out x);
+            _ = int.TryParse(Console.ReadLine(), out int x);
 
             // Decisão
             if (x >= 0) {
