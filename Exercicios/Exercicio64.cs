@@ -215,7 +215,7 @@ namespace ExerciciosCSharp.Exercicios {
 
             Console.WriteLine("Bem vindo!");
 
-            // Método que recebe o valor do tamanho do vetor.
+            //Variável que recebe do método o valor do tamanho do vetor.
             int tamanhoVetor = programa.TamanhoVetor();
 
             // Valida  se o tamanho do vetor informado é maior do que 0.
