@@ -14,6 +14,129 @@ namespace ExerciciosCSharp.Exercicios {
 
     internal class Exercicio64 {
 
+        private int TamanhoVetor() {
+            // Solicita ao usuário o tamanho desejado do vetor.
+            Console.Write("\nInforme quantos valores serão colocados no vetor: ");
+            _ = int.TryParse(Console.ReadLine(), out int tamanhoVetor);
+
+            return tamanhoVetor;
+        }
+
+        private bool ValidaTamanhoVetor(int tamanhoVetor) {
+            // Valida se o tamanho do vetor está com um valor válido.
+            if (tamanhoVetor <= 0) {
+                return true;
+            }
+            return false;
+        }
+
+        private bool RepetirTamanhoVetor() {
+            Console.Write("\nDeseja informar o tamanho do vetor novamente(S/N): ");
+            _ = char.TryParse(Console.ReadLine(), out char repetirTamanhoVetor);
+
+            // Válida se o que foi informado pelo usuário,
+            // será para repetir ou não, o processo onde é informado o tamanho do vetor.
+            if (repetirTamanhoVetor == 's' || repetirTamanhoVetor == 'S') {
+                return true;
+            }
+            return false;
+        }
+
+        private double[] CriarVetor(int tamanhoVetor) {
+            // Cria o vetor, com o tamanho informado.
+            double[] vetor = new double[tamanhoVetor];
+            return vetor;
+        }
+
+        private bool ValidaOpcao(uint opcao) {
+            // Se a opção informada está no range entre 1 e 7.
+            if (opcao >= 1 && opcao < 7) {
+                return true;
+            }
+            return false;
+        }
+
+        private uint MenuPrincipal() {
+            Console.WriteLine("");
+            // Mostra as opções ao usuário e guarda a opção na variável opcao.
+            Console.WriteLine("Opções:");
+            Console.WriteLine("");
+            Console.WriteLine("1 - Carregar Vetor;");
+            Console.WriteLine("2 - Listar Vetor;");
+            Console.WriteLine("3 - Exibir apenas os números pares do vetor,");
+            Console.WriteLine("4 - Exibir apenas os números ímpares do vetor,");
+            Console.WriteLine("5 - Exibir a quantidade de números pares existem nas posições ímpares do vetor,");
+            Console.WriteLine("6 - Exibir a quantidade de números ímpares existem nas posições pares do vetor,");
+            Console.WriteLine("7 - Sair.");
+            Console.WriteLine("");
+            Console.Write("Informe a opção desejada: ");
+            _ = uint.TryParse(Console.ReadLine(), out uint opcao);
+
+            Console.WriteLine("");
+
+            return opcao;
+        }
+
+        private bool ValidaVetor(double[] vetor) {
+            // laço onde válida se o vetor está com valor válido, diferente de 0.
+            // Se for igual a 0, guarda na variável numVetorInvalido.
+            // Será informado ao usuário que o valor na posição é inválido.
+            int numVetorInvalido = 0;
+            for (int i = 0; i < vetor.Length; i++) {
+                if (vetor[i] == 0) {
+                    numVetorInvalido++;
+                    Console.WriteLine("O número na posição {0} é inválido!", i + 1);
+                }
+            }
+
+            Console.WriteLine("");
+
+            // Se a variável tiver um valor maior que 0, será informado ao usuário que houve problema na carga do vetor.
+            if (numVetorInvalido > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        private void MenuOpcoes(uint opcao, double[] vetor) {
+            // Efetuado a instância da classe para que os métodos não estáticos sejam acessado pelo método estático.
+            Exercicio64 programa = new();
+
+            // Usado o switch por ser mais prático e legível, mas pode ser usado também uma cadeia de if/else if.
+            // Chama o método desejado.
+            switch (opcao) {
+                case 1:
+                    programa.CarregarVetor(vetor);
+                    break;
+
+                case 2:
+                    programa.ListarVetor(vetor);
+                    break;
+
+                case 3:
+                    programa.ExibirPares(vetor);
+                    break;
+
+                case 4:
+
+                    programa.ExibirImpares(vetor);
+                    break;
+
+                case 5:
+
+                    programa.QuantidadeParesPosicoesImpares(vetor);
+                    break;
+
+                case 6:
+
+                    programa.QuantidadeImparesPosicoesPares(vetor);
+                    break;
+
+                case 7:
+                    break;
+            }
+        }
+
         private void CarregarVetor(double[] vetor) {
             // Laço para o usuário fazer a carga dos dados no vetor.
             for (int i = 0; i < vetor.Length; i++) {
@@ -23,7 +146,8 @@ namespace ExerciciosCSharp.Exercicios {
         }
 
         private void ListarVetor(double[] vetor) {
-            Console.WriteLine("Listando os valores guardado no vetor!");
+            Console.WriteLine("Listando os valores guardados no vetor!");
+            Console.WriteLine("");
 
             // laço para listar o vetor.
             for (int i = 0; i < vetor.Length; i++) {
@@ -85,112 +209,72 @@ namespace ExerciciosCSharp.Exercicios {
             // Efetuado a instância da classe para que os métodos não estáticos sejam acessado pelo método estático.
             Exercicio64 programa = new();
 
-            // Variável onde guarda a opção escolhida pelo usuário.
-            uint opcao = 0;
+            // Criação do vetor e uma variável para validar se o tamanho do vetor está maior do que 0.
+            double[] vetor;
+            bool validaTamanhoVetor = true;
+
             Console.WriteLine("Bem vindo!");
 
-            // Solicita ao usuário o tamanho desejado do vetor.
-            Console.Write("Informe quantos valores serão colocados no vetor: ");
-            _ = int.TryParse(Console.ReadLine(), out int tamanhoVetor);
+            // Método que recebe o valor do tamanho do vetor.
+            int tamanhoVetor = programa.TamanhoVetor();
 
-            // Cricação do vetor
-            double[] vetor = new double[tamanhoVetor];
-
-            // Usado para validação se o vetor foi carragado antes de efetuar as apções onde necessita dele carregado.
-            vetor[0] = 0000;
-
-            // Laço infinito que termina com a opção 7.
-            while (opcao != 7) {
-                Console.WriteLine("");
-                // Mostra as opções ao usuário e guarda a opão na variável opcao.
-                Console.WriteLine("Opções:");
-                Console.WriteLine("");
-                Console.WriteLine("1 - Carregar Vetor;");
-                Console.WriteLine("2 - Listar Vetor;");
-                Console.WriteLine("3 - Exibir apenas os números pares do vetor,");
-                Console.WriteLine("4 - Exibir apenas os números ímpares do vetor,");
-                Console.WriteLine("5 - Exibir a quantidade de números pares existem nas posições ímpares do vetor,");
-                Console.WriteLine("6 - Exibir a quantidade de números ímpares existem nas posições pares do vetor,");
-                Console.WriteLine("7 - Sair.");
-                Console.WriteLine("");
-                Console.Write("Informe a opção desejada: ");
-                _ = uint.TryParse(Console.ReadLine(), out opcao);
-
-                Console.WriteLine("");
-
-                // Usado o switch por ser mais prático e legível, mas pode ser usado também uma cadeia de if/else if.
-                // Vai para opção desejada e chama o método ou termina o laço.
+            // Valida  se o tamanho do vetor informado é maior do que 0.
+            // Se não imprimi uma mensagem de erro e valida se o usuário deseja informar novo tamanha para o vetor.
+            while (validaTamanhoVetor) {
                 try {
-                    switch (opcao) {
-                        case 1:
-                            programa.CarregarVetor(vetor);
-                            break;
-
-                        case 2:
-                            // Faz uma validação se foi carregado o vetor.
-                            // Feito uma tratativa de erro caso o vetor não estaja carregado.
-                            if (vetor[0] != 0000) {
-                                programa.ListarVetor(vetor);
-                            } else {
-                                throw new ArgumentException("O vetor ainda não foi carregado!" +
-                                    "\nFavor carregar o vetor!");
-                            }
-                            break;
-
-                        case 3:
-                            // Faz uma validação se foi carregado o vetor antes de exibir os números pares.
-                            // Feito uma tratativa de erro caso o vetor não estaja carregado.
-                            if (vetor[0] != 0000) {
-                                programa.ExibirPares(vetor);
-                            } else {
-                                throw new ArgumentException("O vetor ainda não foi carregado!" +
-                                    "\nFavor carregar o vetor!");
-                            }
-                            break;
-
-                        case 4:
-                            // Faz uma validação se foi carregado o vetor.
-                            // Feito uma tratativa de erro caso o vetor não estaja carregado.
-                            if (vetor[0] != 0000) {
-                                programa.ExibirImpares(vetor);
-                            } else {
-                                throw new ArgumentException("O vetor ainda não foi carregado!" +
-                                    "\nFavor carregar o vetor!");
-                            }
-                            break;
-
-                        case 5:
-                            // Faz uma validação se foi carregado o vetor.
-                            // Feito uma tratativa de erro caso o vetor não estaja carregado.
-                            if (vetor[0] != 0000) {
-                                programa.QuantidadeParesPosicoesImpares(vetor);
-                            } else {
-                                throw new ArgumentException("O vetor ainda não foi carregado!" +
-                                    "\nFavor carregar o vetor!");
-                            }
-                            break;
-
-                        case 6:
-                            // Faz uma validação se foi carregado o vetor.
-                            // Feito uma tratativa de erro caso o vetor não estaja carregado.
-                            if (vetor[0] != 0000) {
-                                programa.QuantidadeImparesPosicoesPares(vetor);
-                            } else {
-                                throw new ArgumentException("O vetor ainda não foi carregado!" +
-                                    "\nFavor carregar o vetor!");
-                            }
-                            break;
-
-                        case 7:
-                            Console.WriteLine("Fim!");
-                            break;
-
-                        default:
-                            throw new ArgumentException("Opção inválida!");
+                    if (programa.ValidaTamanhoVetor(tamanhoVetor)) {
+                        throw new ArgumentException("\nO tamanho do vetor não pode ser menor igual a 0!");
+                    } else {
+                        validaTamanhoVetor = false;
                     }
-                } catch (Exception ex) {
-                    Console.WriteLine(ex.Message);
+                } catch (ArgumentException error) {
+                    Console.WriteLine(error.Message);
+                    if (programa.RepetirTamanhoVetor()) {
+                        tamanhoVetor = programa.TamanhoVetor();
+                    } else {
+                        validaTamanhoVetor = false;
+                    }
                 }
+            }
+
+            // Valida se o tamanho está correto cotinua a execução do programa,
+            // se o usuário não informou correto e não quis repetir o tamanho saí do programa.
+            if (!programa.ValidaTamanhoVetor(tamanhoVetor)) {
+                // Cricação do vetor
+                vetor = programa.CriarVetor(tamanhoVetor);
+
+                // Laço usado para guardar um valor em todas as posições,
+                // para validar se o vetor foi carragado corretamente,
+                // antes de efetuar as opções onde necessita dele carregado.
+                for (int i = 0; i < vetor.Length; i++) {
+                    vetor[i] = 0;
+                }
+
+                // Criação da variável opcaoEscolhida e guardar o retorno do método.
+                uint opcaoEscolhida = programa.MenuPrincipal();
+
+                // Laço que valida se foi esolhido uma opção válida.
+                // Se for inválida informa ao usuário.
+                // Se for 7 termina o programa.
+                while (opcaoEscolhida != 7) {
+                    if (programa.ValidaOpcao(opcaoEscolhida)) {
+                        if (opcaoEscolhida == 1) {
+                            programa.MenuOpcoes(opcaoEscolhida, vetor);
+                        } else if (programa.ValidaVetor(vetor)) { // Válida o vetor se está válido ou não.
+                            Console.WriteLine("O vetor não foi carregado corretamente!" +
+                            "\nFavor, efetuar cargar no vetor!");
+                        } else {
+                            programa.MenuOpcoes(opcaoEscolhida, vetor);
+                        }
+                        opcaoEscolhida = programa.MenuPrincipal();
+                    } else {
+                        Console.WriteLine("A opção escolhida é inválida!");
+                        opcaoEscolhida = programa.MenuPrincipal();
+                    }
+                }
+                Console.WriteLine("Fim!"); // Opção 7 sair.
+            } else {
+                Console.WriteLine("\nFim!"); // Aqui o tamanho do vetor e o usuário não quis informar o tamanho do vetor.
             }
         }
     }
