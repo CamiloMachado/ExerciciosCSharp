@@ -133,6 +133,7 @@ namespace ExerciciosCSharp.Exercicios {
                     break;
 
                 case 7:
+                    Console.WriteLine("Fim!");
                     break;
             }
         }
@@ -272,7 +273,6 @@ namespace ExerciciosCSharp.Exercicios {
                         opcaoEscolhida = programa.MenuPrincipal();
                     }
                 }
-                Console.WriteLine("Fim!"); // Opção 7 sair.
             } else {
                 Console.WriteLine("\nFim!"); // Aqui o tamanho do vetor e o usuário não quis informar o tamanho do vetor.
             }
