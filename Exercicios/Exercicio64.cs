@@ -219,7 +219,7 @@ namespace ExerciciosCSharp.Exercicios {
             int tamanhoVetor = programa.TamanhoVetor();
 
             // Valida  se o tamanho do vetor informado é maior do que 0.
-            // Se não imprimi uma mensagem de erro e valida se o usuário deseja informar novo tamanha para o vetor.
+            // Se não imprimi uma mensagem de erro e válida se o usuário deseja informar novo tamanha para o vetor.
             while (validaTamanhoVetor) {
                 try {
                     if (programa.ValidaTamanhoVetor(tamanhoVetor)) {
